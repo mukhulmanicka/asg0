@@ -73,19 +73,19 @@ function handleDrawOperationEvent() {
   } else if (operation === "sub") {
     v3 = v1.sub(v2); 
     drawVector(ctx, v3, "green");
-  } else if (operation === "mul") {
-    v3 = v1.mul(scalar); 
-    v4 = v2.mul(scalar); 
-    drawVector(ctx, v3, "green");
-    drawVector(ctx, v4, "green");
   } else if (operation === "div") {
     v3 = v1.div(scalar); 
     v4 = v2.div(scalar); 
     drawVector(ctx, v3, "green");
     drawVector(ctx, v4, "green");
+  } else if (operation === "mul") {
+    v3 = v1.mul(scalar); 
+    v4 = v2.mul(scalar); 
+    drawVector(ctx, v3, "green");
+    drawVector(ctx, v4, "green");
   } else if (operation === "magnitude") {
-    console.log("Magnitude of v1: " + v1.magnitude()); 
-    console.log("Magnitude of v2: " + v2.magnitude()); 
+    console.log("Magnitude of vector 1: " + v1.magnitude()); 
+    console.log("Magnitude of vector 2: " + v2.magnitude()); 
   } else if (operation === "normalize") {
     v3 = v1.normalize(); 
     v4 = v2.normalize(); 
@@ -102,6 +102,6 @@ function handleDrawOperationEvent() {
     let crossProduct = Vector3.cross(v1, v2); 
     let area = crossProduct.magnitude() / 2; 
 
-    console.log("Area of triangle: " + area);
+    console.log("Area of Triangle: " + area);
   }
 }
